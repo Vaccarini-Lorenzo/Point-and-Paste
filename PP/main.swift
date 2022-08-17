@@ -7,13 +7,8 @@
 
 import Foundation
 
-print("init")
-
 CGInit()
 let mouseCoordinates = getMouseCoordinates()
 let displayID = getIdFromMouseCoordinates(mouseCoordinates)
-let pixel = getPixel(id: displayID, mouse: mouseCoordinates)
-let hexString = getHexString(pixel: pixel)
+let hexString = getPixel(id: displayID, mouse: mouseCoordinates)
 copyToClipboard(string: hexString)
-
-print("All Ok")
