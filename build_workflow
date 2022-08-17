@@ -1,0 +1,11 @@
+#!bin/bash
+
+SERVICES=$HOME/Library/Services
+WORKFLOW=$SERVICES/pp.workflow
+CONTENT=$WORKFLOW/Contents
+DOC=$PWD/document.wflow
+INFO=$PWD/Info.plist
+
+mkdir $WORKFLOW && mkdir $CONTENT
+mv $DOC $CONTENT
+mv $INFO $CONTENT
