@@ -61,16 +61,16 @@ func getIdFromMouseCoordinates(_ mouse: CGPoint) -> CGDirectDisplayID{
 
 func getHexString(r: UInt8, g: UInt8, b:UInt8) -> String {
     let r_hex = r < 16 ? String(format: "0%X", r) : String(format: "%X", r)
-    let g_hex = r < 16 ? String(format: "0%X", g) : String(format: "%X", g)
-    let b_hex = r < 16 ? String(format: "0%X", b) : String(format: "%X", b)
-
+    let g_hex = g < 16 ? String(format: "0%X", g) : String(format: "%X", g)
+    let b_hex = b < 16 ? String(format: "0%X", b) : String(format: "%X", b)
+    
     return r_hex + g_hex + b_hex
 }
 
 func getImage(id: CGDirectDisplayID, size: Int, mouse: CGPoint) -> CGImage {
     let bounds = CGDisplayBounds(id)
     let relativePoint = CGPoint(x: mouse.x - bounds.origin.x, y: mouse.y - bounds.origin.y)
-    // 10 pixel
+    
     let size = CGSize(width: size, height: size)
     
     //Centering the rect
@@ -113,8 +113,6 @@ func votePixel(rawData: [CUnsignedChar], size: Int) -> String {
             let r = rawData[base]
             let g = rawData[base + 1]
             let b = rawData[base + 2]
-            
-            print(r, g, b)
             
             let hex = getHexString(r: r, g: g, b: b)
             let p = pxl(hex: hex, r: r, g: g, b: b)
