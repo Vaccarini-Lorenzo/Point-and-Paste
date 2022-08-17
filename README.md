@@ -26,7 +26,7 @@ Since this project is very new there are a list of issues that are not fixed yet
 
 2. It requires the permission to record your screen from the applications subject to the pixel capture (a pop-up request will be shown). Unfortunately if the permission is not given, the application will result transparent and the only color that will be captured is the one of the background
 
-3. It can be hard to find a key-binding not used by all the applications. One that
+3. It can be hard to find a key-binding not used by all the applications. One that looks to be working is `⌃ ⌥ ⌘ -`
 
 **Please feel free to contact me if you find any other issue or a solution to the above problems: I appreciate every pull request.**
 
