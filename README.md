@@ -12,11 +12,13 @@ Point & Paste is a simple macOS tool that makes the research for the right color
 
 1. Clone this repository
 
-2. Open the src folder with XCode & Build it
+2. Open the src folder with XCode & Archive it
 
-3. Execute the build_workflow shell script `chmod +x build_workflow && . build_workflow`
+3. Move the executable to the same folder of the build_workflow script
 
-4. Bind whatever key you like to the **pp** service
+4. Execute the build_workflow shell script `chmod +x build_workflow && . build_workflow`
+
+5. Bind whatever key you like to the **pp** service
 
 ![KeyboardScreen](Resources/KeyboardScreen.jpg)
 
@@ -32,6 +34,6 @@ Since this project is very new there are a list of issues that are not fixed yet
 
 # TO-DO list
 
-1. Add brew installation
+1. Add brew installation: This installation is too cumbersome
 
 2. Fix the above issues

@@ -1,11 +1,24 @@
 #!bin/bash
 
+BIN=/usr/local/bin
 SERVICES=$HOME/Library/Services
 WORKFLOW=$SERVICES/pp.workflow
 CONTENT=$WORKFLOW/Contents
 DOC=$PWD/document.wflow
 INFO=$PWD/Info.plist
 
+echo "Looking for the executable Point&Paste..."
+
+EXEC=$(find $HOME -regex .*PP -not -path "*/Library/*" -not -path "*/.Trash/*" -not -path "*/src/*" -print -quit)
+
+if [[ -x $EXEC ]]; then
+    echo "Archive found: $EXEC"
+else
+    echo "Archive not found: You first need to build & archive the src folder"
+    exit 0
+fi
+
 mkdir $WORKFLOW && mkdir $CONTENT
 mv $DOC $CONTENT
 mv $INFO $CONTENT
+mv $EXEC $BIN
