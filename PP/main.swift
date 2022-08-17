@@ -8,4 +8,8 @@
 import Foundation
 
 CGInit()
-let displayID = getIdFromMouseCoordinates()
+let mouseCoordinates = getMouseCoordinates()
+let displayID = getIdFromMouseCoordinates(mouseCoordinates)
+let pixel = getPixel(id: displayID, mouse: mouseCoordinates)
+let hexString = getHexString(pixel: pixel)
+copyToClipboard(string: hexString)
