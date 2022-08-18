@@ -18,6 +18,10 @@ Point & Paste is a simple macOS tool that makes the research for the right color
 
 ![KeyboardScreen](Resources/KeyboardScreen.jpg)
 
+# Usage
+
+**Simply point to the color you want to capture and press the key previously chosen to copy it!**
+
 # Open issues
 Since this project is very new there are a list of issues that are not fixed yet:
 1. Sometimes, if the mouse gets moved, it will be copied the hex color of adjacent pixels
